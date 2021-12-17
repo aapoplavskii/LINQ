@@ -34,11 +34,15 @@ namespace LINQ
             }
 
             var list = new List<T>();
+            var index = Math.Round(((double)enumerable.Count() * top / 100), MidpointRounding.AwayFromZero);
+                     
+
             foreach (var item in enumerable)
             {
-                if (func(item) == true)
+                if (func(item) == true && index > 0)
                 { 
                     list.Add((T)item);
+                    index--;
                 }
             }
             
