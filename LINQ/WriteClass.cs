@@ -16,7 +16,7 @@ namespace LINQ
                 WriteData(liststr);
                 Console.WriteLine("");
 
-                var liststr2 = str2.Top(50, person => person.Age < 30);
+                var liststr2 = str2.Top(50, person => person.Age);
 
                 Console.WriteLine("Вывод данных по методу перегрузка:");
                 WriteData(liststr2);
